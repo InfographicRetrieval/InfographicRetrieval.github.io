@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Me the Infographic I Imagine</title>
+    <meta
+      name="description"
+      content="Project homepage for Show Me the Infographic I Imagine: Intent-Aware Infographic Retrieval for Authoring Support."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-card" id="top">
+          <div class="hero-copy">
+            <h1>
+              Show Me the Infographic I Imagine:
+              <span class="title-break">Intent-Aware Infographic Retrieval for Authoring Support</span>
+            </h1>
+            <div class="action-row">
+              <a class="button primary" data-link="paperUrl" href="assets/pdfs/paper.pdf">Paper</a>
+              <a class="button" data-link="supplementaryUrl" href="assets/pdfs/supplementary.pdf">Supplementary</a>
+              <a class="button" data-link="videoUrl" href="assets/video/demo.mp4">Video</a>
+              <a class="button" data-link="codeRepoUrl" href="https://github.com/InfographicRetrieval/intent-aware-infographic-retrieval">Code</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section feature-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Teaser</p>
+            <h2>From vague intent to editable infographic drafts</h2>
+          </div>
+          <figure class="media-card large">
+            <img
+              src="assets/images/teaser.png"
+              alt="Teaser overview of the retrieve-and-adapt workflow for infographic authoring."
+            />
+            <figcaption>
+              A natural-language query is decomposed into weighted intent facets, matched against an infographic corpus, and turned into exemplar-grounded outputs that can be adapted to the user&apos;s data.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="section" id="abstract">
+          <div class="section-heading">
+            <p class="eyebrow">Abstract</p>
+            <h2>Why retrieval needs to understand design intent</h2>
+          </div>
+          <div class="prose-card">
+            <p>
+              While infographics are a powerful medium for communicating data-driven stories, authoring them from scratch remains difficult, especially for novice users. Retrieving strong exemplars can reduce that burden, but effective retrieval is challenging because users often express their needs in ambiguous natural language while infographic designs blend multiple visual and structural factors. This project introduces an intent-aware infographic retrieval framework that aligns free-form requests with infographic designs through a five-facet taxonomy spanning content, style, layout, illustration, and chart type. Building on the retrieved exemplars, the system also supports exemplar-driven adaptation through a conversational interface that helps users turn high-level design goals into editable outputs.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="method">
+          <div class="section-heading">
+            <p class="eyebrow">Method</p>
+            <h2>Facet-aware retrieval instead of one-score similarity</h2>
+          </div>
+          <div class="callout-grid">
+            <article class="callout-card">
+              <h3>Intent taxonomy</h3>
+              <p>
+                User requests are represented through five facets so the system can separately reason about topic, chart form, composition, decorative cues, and aesthetic tone.
+              </p>
+            </article>
+            <article class="callout-card">
+              <h3>Weighted matching</h3>
+              <p>
+                Each facet contributes with its own query text and importance weight, which makes retrieval more controllable than a single collapsed relevance score.
+              </p>
+            </article>
+            <article class="callout-card">
+              <h3>Authoring support</h3>
+              <p>
+                Retrieved exemplars are not the endpoint. They become references that users can pin, compare, and adapt in an integrated authoring workflow.
+              </p>
+            </article>
+          </div>
+
+          <figure class="media-card">
+            <img
+              src="assets/images/pipeline.png"
+              alt="Method overview showing training and inference pipelines for intent-aware infographic retrieval."
+            />
+            <figcaption>
+              The retrieval pipeline combines taxonomy-guided query parsing, facet-specific similarity estimation, and weighted fusion over an infographic corpus.
+            </figcaption>
+          </figure>
+
+          <div class="facet-strip">
+            <span>content</span>
+            <span>style</span>
+            <span>layout</span>
+            <span>illustration</span>
+            <span>chart type</span>
+          </div>
+        </section>
+
+        <section class="section" id="demo">
+          <div class="section-heading">
+            <p class="eyebrow">Demo</p>
+            <h2>Conversational retrieve-and-adapt workflow</h2>
+          </div>
+          <div class="media-grid">
+            <div class="media-card video-card">
+              <video controls playsinline preload="metadata">
+                <source src="assets/video/demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p class="media-note">
+                The video walks through retrieval, exemplar selection, and downstream adaptation inside the interactive system.
+              </p>
+            </div>
+            <figure class="media-card">
+              <img
+                src="assets/images/interface.png"
+                alt="System interface with chat, exemplar panel, output panel, and retrieval panel."
+              />
+              <figcaption>
+                The interface keeps retrieval controls, pinned exemplars, and iterative SVG outputs in one place.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section" id="gallery">
+          <div class="section-heading">
+            <p class="eyebrow">Gallery</p>
+            <h2>Example infographic references</h2>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img src="assets/gallery/sample-1.png" alt="Infographic example 1." />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery/sample-2.png" alt="Infographic example 2." />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery/sample-3.png" alt="Infographic example 3." />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery/sample-4.png" alt="Infographic example 4." />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery/sample-5.png" alt="Infographic example 5." />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/gallery/sample-6.png" alt="Infographic example 6." />
+            </figure>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Additional Views</p>
+            <h2>More detail on chart types and authoring outcomes</h2>
+          </div>
+          <div class="two-up">
+            <figure class="media-card">
+              <img
+                src="assets/images/chart-type-overview.png"
+                alt="Chart type overview figure."
+              />
+              <figcaption>
+                Coarse chart-type organization used to support controllable matching and soft chart-type constraints.
+              </figcaption>
+            </figure>
+            <figure class="media-card">
+              <img
+                src="assets/images/authoring-cases.png"
+                alt="Examples from the authoring evaluation."
+              />
+              <figcaption>
+                Qualitative authoring cases illustrate how retrieved references support downstream adaptation.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section" id="resources">
+          <div class="section-heading">
+            <p class="eyebrow">Resources</p>
+            <h2>Project files and repositories</h2>
+          </div>
+          <div class="resource-grid">
+            <a class="resource-card" data-link="paperUrl" href="assets/pdfs/paper.pdf">
+              <span class="resource-type">PDF</span>
+              <strong>Paper</strong>
+              <p>Main paper PDF for the project.</p>
+            </a>
+            <a class="resource-card" data-link="supplementaryUrl" href="assets/pdfs/supplementary.pdf">
+              <span class="resource-type">PDF</span>
+              <strong>Supplementary</strong>
+              <p>Additional prompts, protocol details, and system notes.</p>
+            </a>
+            <a class="resource-card" data-link="videoUrl" href="assets/video/demo.mp4">
+              <span class="resource-type">MP4</span>
+              <strong>Demo Video</strong>
+              <p>Walkthrough of the retrieval-and-adaptation workflow.</p>
+            </a>
+            <a
+              class="resource-card"
+              data-link="codeRepoUrl"
+              href="https://github.com/InfographicRetrieval/intent-aware-infographic-retrieval"
+            >
+              <span class="resource-type">GitHub</span>
+              <strong>Code Repository</strong>
+              <p>Separate source repository linked from this homepage.</p>
+            </a>
+            <a
+              class="resource-card"
+              data-link="homepageRepoUrl"
+              href="https://github.com/InfographicRetrieval/InfographicRetrieval.github.io"
+            >
+              <span class="resource-type">GitHub</span>
+              <strong>Homepage Repository</strong>
+              <p>The GitHub Pages repository hosting this site.</p>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Built for GitHub Pages. Repository links are configured in
+          <code>site-config.js</code>.
+        </p>
+        <p>
+          <span id="footer-year"></span> Infographic Retrieval Project
+        </p>
+      </footer>
+    </div>
+
+    <script src="site-config.js"></script>
+    <script src="assets/site.js"></script>
+  </body>
+</html>
