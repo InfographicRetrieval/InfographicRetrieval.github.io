@@ -141,6 +141,24 @@ code {
   white-space: nowrap;
 }
 
+.publication-authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 18px;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.publication-authors a {
+  color: var(--secondary);
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
 .hero-subtitle {
   margin: 14px 0 0;
   font-size: clamp(1.05rem, 2.2vw, 1.4rem);
