@@ -145,18 +145,27 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.35rem;
-  margin-top: 18px;
+  gap: 0.42rem;
+  margin-top: 20px;
   color: var(--text);
-  font-size: 1.05rem;
+  font-size: 1.28rem;
+  line-height: 1.45;
 }
 
 .publication-authors a {
   color: var(--secondary);
+  font-weight: 500;
 }
 
 .publication-authors a:hover {
   text-decoration: underline;
+}
+
+.publication-notes {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .hero-subtitle {
